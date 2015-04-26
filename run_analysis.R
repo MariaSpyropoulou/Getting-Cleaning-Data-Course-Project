@@ -37,8 +37,7 @@ meanstd<-merged[,matches]
 
 #Use descriptive activity names to name the activities in the new data set
 #Train and test labels give the acivities as numbers 1-6
-#We create a data frame df out of them so we can merge the descriptive activityiD 
-#from the activity_labels table with the numeric labels from df by the common numeric variable
+#but we will change that later
 labels<-rbind(train_labels,test_labels)[,1]
 labels<-as.numeric(labels)
 meanstd<-cbind(Activity= labels,meanstd)
